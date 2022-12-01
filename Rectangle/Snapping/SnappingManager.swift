@@ -270,7 +270,7 @@ class SnappingManager {
                             box = FootprintWindow()
                         }
                         if Defaults.footprintAnimationDurationMultiplier.value > 0 {
-                            if !box!.isVisible || box!.alphaValue < CGFloat(Defaults.footprintAlpha.value), let origin = getFootprintAnimationOrigin(snapArea, newBoxRect) {
+                            if (!box!.isVisible || box!.alphaValue < CGFloat(Defaults.footprintAlpha.value)), let origin = getFootprintAnimationOrigin(snapArea, newBoxRect) {
                                 let frame = CGRect(origin: origin, size: .zero)
                                 box!.setFrame(frame, display: false)
                             }
